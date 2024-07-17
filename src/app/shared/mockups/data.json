@@ -1,0 +1,26 @@
+{
+  "produtos": [
+    {
+      "id": "1",
+      "nome": "Anthurium – King of hearts",
+      "descricao": "Croton, also called “garden croton,” are native to the tropical forests of southeast Asia and Oceania. In the wild, they grow as large shrubs, reaching up to 10 feet tall (in the home or garden, they stay a lot smaller).",
+      "valor": "79",
+      "imagem": [
+        "https://woodmart.xtemos.com/plants/wp-content/uploads/sites/12/2023/05/w-indoor-plants-small-4-0.jpg",
+        "https://woodmart.xtemos.com/plants/wp-content/uploads/sites/12/2023/05/w-indoor-plants-small-4-1.jpg",
+        "https://woodmart.xtemos.com/plants/wp-content/uploads/sites/12/2023/05/w-indoor-plants-small-4-2.jpg",
+        "https://woodmart.xtemos.com/plants/wp-content/uploads/sites/12/2023/05/w-indoor-plants-small-4-3.jpg",
+        "https://woodmart.xtemos.com/plants/wp-content/uploads/sites/12/2023/05/w-indoor-plants-small-4-4.jpg"
+      ],
+      "estoque": 10
+    }
+  ],
+  "comentarios": [
+    {
+      "id": "1",
+      "nome": "Scheila Stihler",
+      "comentario": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget nulla tristique, maximus ligula vitae, condimentum sapien posuere.",
+      "produto_id": 1
+    }
+  ]
+}
