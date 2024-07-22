@@ -1,0 +1,14 @@
+h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+p {
+  text-align: center;
+  margin: 24px 0;
+}
+ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
