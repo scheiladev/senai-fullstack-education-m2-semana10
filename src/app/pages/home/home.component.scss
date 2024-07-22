@@ -1,0 +1,39 @@
+.mais-vendidos {
+  padding: 40px 0 80px;
+  border-bottom: 2px solid #ccc;
+  h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  ul {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px;
+    li {
+      width: 220px;
+    }
+  }
+}
+
+.ofertas {
+  padding: 40px 0;
+  h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+}
+
+swiper-container::part(button-prev),
+swiper-container::part(button-next) {
+  color: green;
+}
+swiper-container::part(bullet-active) {
+  background-color: greenyellow;
+}
