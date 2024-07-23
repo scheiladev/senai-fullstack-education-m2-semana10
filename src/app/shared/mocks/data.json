@@ -385,276 +385,322 @@
     {
       "id": 1,
       "nome": "Ema Norton",
+      "avatar": "https://randomuser.me/api/portraits/women/1.jpg",
       "comentario": "A seemingly elegant design can quickly begin to bloat with unexpected content or break under the weight of actual activity. Fake data can ensure a nice looking layout but it doesn’t reflect what a living, breathing application must endure.",
       "produto_id": 1
     },
     {
       "id": 2,
       "nome": "Oliwia Whitley",
+      "avatar": "https://randomuser.me/api/portraits/women/2.jpg",
       "comentario": "Usually, we prefer the real thing, wine without sulfur based preservatives, real butter, not margarine, and so we’d like our layouts and designs to be filled with real words, with thoughts that count, information that has value.",
       "produto_id": 2
     },
     {
       "id": 3,
       "nome": "Mr. Mackay",
+      "avatar": "https://randomuser.me/api/portraits/men/1.jpg",
       "comentario": "The villagers are out there with a vengeance to get that Frankenstein, wielding torches and pitchforks, wanting to tar and feather it at the least, running it out of town in shame.",
       "produto_id": 2
     },
     {
       "id": 4,
       "nome": "Mr. Mackay",
+      "avatar": "https://randomuser.me/api/portraits/men/1.jpg",
       "comentario": "Lorem Ipsum is a tool that can be useful, used intentionally it may help solve some problems. If you go about content strategy the wrong way, fix that problem.",
       "produto_id": 3
     },
     {
       "id": 5,
       "nome": "Anna Taylor",
+      "avatar": "https://randomuser.me/api/portraits/women/3.jpg",
       "comentario": "Real content is more beneficial for testing purposes. It helps to see how your design holds up under real-world scenarios.",
       "produto_id": 3
     },
     {
       "id": 6,
       "nome": "Jack Thompson",
+      "avatar": "https://randomuser.me/api/portraits/men/2.jpg",
       "comentario": "Using dummy text in mockups can lead to misunderstandings about the final product. Real content helps avoid this.",
       "produto_id": 4
     },
     {
       "id": 7,
       "nome": "Lucas Green",
+      "avatar": "https://randomuser.me/api/portraits/men/3.jpg",
       "comentario": "Without real content, we might miss potential issues that only arise with actual data.",
       "produto_id": 5
     },
     {
       "id": 8,
       "nome": "Sara White",
+      "avatar": "https://randomuser.me/api/portraits/women/4.jpg",
       "comentario": "Placeholder text can give a false impression of the final design. It's best to use real data as soon as possible.",
       "produto_id": 6
     },
     {
       "id": 9,
       "nome": "David Johnson",
+      "avatar": "https://randomuser.me/api/portraits/men/4.jpg",
       "comentario": "It's important to test with real content to see how the design handles different scenarios.",
       "produto_id": 6
     },
     {
       "id": 10,
       "nome": "Emily Brown",
+      "avatar": "https://randomuser.me/api/portraits/women/5.jpg",
       "comentario": "Using real content from the start can help identify potential issues early in the design process.",
       "produto_id": 7
     },
     {
       "id": 11,
       "nome": "Michael Smith",
+      "avatar": "https://randomuser.me/api/portraits/men/5.jpg",
       "comentario": "Real data can reveal issues that dummy text won't show.",
       "produto_id": 8
     },
     {
       "id": 12,
       "nome": "Emma Davis",
+      "avatar": "https://randomuser.me/api/portraits/women/6.jpg",
       "comentario": "Using real content makes the testing process more effective.",
       "produto_id": 9
     },
     {
       "id": 13,
       "nome": "James Wilson",
+      "avatar": "https://randomuser.me/api/portraits/men/6.jpg",
       "comentario": "Testing with real data helps to ensure that the final product meets user expectations.",
       "produto_id": 9
     },
     {
       "id": 14,
       "nome": "Sophia Martinez",
+      "avatar": "https://randomuser.me/api/portraits/women/7.jpg",
       "comentario": "Real content can highlight design issues that might not be apparent with placeholder text.",
       "produto_id": 9
     },
     {
       "id": 15,
       "nome": "Oliver Anderson",
+      "avatar": "https://randomuser.me/api/portraits/men/7.jpg",
       "comentario": "It's best to use real content to get a true sense of how the design performs.",
       "produto_id": 11
     },
     {
       "id": 16,
       "nome": "Isabella Thompson",
+      "avatar": "https://randomuser.me/api/portraits/women/8.jpg",
       "comentario": "Using real data from the beginning helps to create a more accurate and reliable design.",
       "produto_id": 11
     },
     {
       "id": 17,
       "nome": "Liam Harris",
+      "avatar": "https://randomuser.me/api/portraits/men/8.jpg",
       "comentario": "Real content can help identify potential issues and improve the overall design.",
       "produto_id": 12
     },
     {
       "id": 18,
       "nome": "Mia Clark",
+      "avatar": "https://randomuser.me/api/portraits/women/9.jpg",
       "comentario": "Placeholder text is useful for initial designs, but real content is necessary for final testing.",
       "produto_id": 13
     },
     {
       "id": 19,
       "nome": "Noah Lewis",
+      "avatar": "https://randomuser.me/api/portraits/men/9.jpg",
       "comentario": "Using real data can help to create a more realistic and effective design.",
       "produto_id": 14
     },
     {
       "id": 20,
       "nome": "Ava Lee",
+      "avatar": "https://randomuser.me/api/portraits/women/10.jpg",
       "comentario": "Real content provides a more accurate representation of how the design will perform.",
       "produto_id": 14
     },
     {
       "id": 21,
       "nome": "William Walker",
+      "avatar": "https://randomuser.me/api/portraits/men/10.jpg",
       "comentario": "It's important to test with real content to ensure the design meets user needs.",
       "produto_id": 14
     },
     {
       "id": 22,
       "nome": "Sophia Hall",
+      "avatar": "https://randomuser.me/api/portraits/women/11.jpg",
       "comentario": "Real data can help to identify issues that might not be apparent with placeholder text.",
       "produto_id": 15
     },
     {
       "id": 23,
       "nome": "Alexander King",
+      "avatar": "https://randomuser.me/api/portraits/men/11.jpg",
       "comentario": "Using real content makes the design process more effective.",
       "produto_id": 17
     },
     {
       "id": 24,
       "nome": "Isabella Wright",
+      "avatar": "https://randomuser.me/api/portraits/women/12.jpg",
       "comentario": "Real data can help to create a more accurate and reliable design.",
       "produto_id": 17
     },
     {
       "id": 25,
       "nome": "Daniel Scott",
+      "avatar": "https://randomuser.me/api/portraits/men/12.jpg",
       "comentario": "Testing with real content helps to ensure that the design meets user expectations.",
       "produto_id": 13
     },
     {
       "id": 26,
       "nome": "Mia Green",
+      "avatar": "https://randomuser.me/api/portraits/women/13.jpg",
       "comentario": "Using real content can help to identify potential issues early in the design process.",
       "produto_id": 13
     },
     {
       "id": 27,
       "nome": "Henry Baker",
+      "avatar": "https://randomuser.me/api/portraits/men/13.jpg",
       "comentario": "Real content can highlight design issues that might not be apparent with placeholder text.",
       "produto_id": 14
     },
     {
       "id": 28,
       "nome": "Emily Gonzalez",
+      "avatar": "https://randomuser.me/api/portraits/women/14.jpg",
       "comentario": "It's best to use real content to get a true sense of how the design performs.",
       "produto_id": 14
     },
     {
       "id": 29,
       "nome": "Michael Nelson",
+      "avatar": "https://randomuser.me/api/portraits/men/14.jpg",
       "comentario": "Real data helps to create a more accurate and effective design.",
       "produto_id": 15
     },
     {
       "id": 30,
       "nome": "Ava Perez",
+      "avatar": "https://randomuser.me/api/portraits/women/15.jpg",
       "comentario": "Using real content makes the testing process more reliable.",
       "produto_id": 15
     },
     {
       "id": 31,
       "nome": "Ethan Thompson",
+      "avatar": "https://randomuser.me/api/portraits/men/15.jpg",
       "comentario": "Testing with real data ensures that the final product meets user needs.",
       "produto_id": 16
     },
     {
       "id": 32,
       "nome": "Sophia Wilson",
+      "avatar": "https://randomuser.me/api/portraits/women/16.jpg",
       "comentario": "Real content can help identify potential issues and improve the overall design.",
       "produto_id": 16
     },
     {
       "id": 33,
       "nome": "James White",
+      "avatar": "https://randomuser.me/api/portraits/men/16.jpg",
       "comentario": "Using real data from the beginning helps to create a more accurate and reliable design.",
       "produto_id": 18
     },
     {
       "id": 34,
       "nome": "Emma Davis",
+      "avatar": "https://randomuser.me/api/portraits/women/17.jpg",
       "comentario": "Real content provides a more accurate representation of how the design will perform.",
       "produto_id": 19
     },
     {
       "id": 35,
       "nome": "Lucas Martinez",
+      "avatar": "https://randomuser.me/api/portraits/men/17.jpg",
       "comentario": "It's important to test with real content to ensure the design meets user needs.",
       "produto_id": 19
     },
     {
       "id": 36,
       "nome": "Mia Brown",
+      "avatar": "https://randomuser.me/api/portraits/women/18.jpg",
       "comentario": "Real data helps to create a more realistic and effective design.",
       "produto_id": 20
     },
     {
       "id": 37,
       "nome": "Henry Taylor",
+      "avatar": "https://randomuser.me/api/portraits/men/18.jpg",
       "comentario": "Real content can help identify potential issues early in the design process.",
       "produto_id": 20
     },
     {
       "id": 38,
       "nome": "Emily Thomas",
+      "avatar": "https://randomuser.me/api/portraits/women/19.jpg",
       "comentario": "Using real content makes the design process more effective.",
       "produto_id": 20
     },
     {
       "id": 39,
       "nome": "Jack Lee",
+      "avatar": "https://randomuser.me/api/portraits/men/19.jpg",
       "comentario": "Real data can help to create a more accurate and reliable design.",
       "produto_id": 21
     },
     {
       "id": 40,
       "nome": "Sophia White",
+      "avatar": "https://randomuser.me/api/portraits/women/20.jpg",
       "comentario": "Testing with real content helps to ensure that the design meets user expectations.",
       "produto_id": 22
     },
     {
       "id": 41,
       "nome": "William Harris",
+      "avatar": "https://randomuser.me/api/portraits/men/20.jpg",
       "comentario": "Real content can highlight design issues that might not be apparent with placeholder text.",
       "produto_id": 22
     },
     {
       "id": 42,
       "nome": "Isabella Clark",
+      "avatar": "https://randomuser.me/api/portraits/women/21.jpg",
       "comentario": "It's best to use real content to get a true sense of how the design performs.",
       "produto_id": 24
     },
     {
       "id": 43,
       "nome": "Oliver King",
+      "avatar": "https://randomuser.me/api/portraits/men/21.jpg",
       "comentario": "Real data helps to create a more accurate and effective design.",
       "produto_id": 24
     },
     {
       "id": 44,
       "nome": "Ava Gonzalez",
+      "avatar": "https://randomuser.me/api/portraits/women/22.jpg",
       "comentario": "Using real content makes the testing process more reliable.",
       "produto_id": 25
     },
     {
       "id": 45,
       "nome": "Liam Hall",
+      "avatar": "https://randomuser.me/api/portraits/men/22.jpg",
       "comentario": "Testing with real data ensures that the final product meets user needs.",
       "produto_id": 25
     },
     {
       "id": 46,
       "nome": "Sophia Nelson",
+      "avatar": "https://randomuser.me/api/portraits/women/23.jpg",
       "comentario": "Real content can help identify potential issues and improve the overall design.",
       "produto_id": 25
     }
