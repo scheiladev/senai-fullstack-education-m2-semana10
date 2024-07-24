@@ -1,11 +1,6 @@
 .mais-vendidos {
-  padding: 40px 0 80px;
+  padding: 60px 0;
   border-bottom: 2px solid #ccc;
-  h2 {
-    font-size: 36px;
-    margin-bottom: 40px;
-    text-align: center;
-  }
   ul {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -17,16 +12,34 @@
 }
 
 .ofertas {
-  padding: 40px 0;
-  h2 {
-    font-size: 36px;
-    margin-bottom: 40px;
-    text-align: center;
-  }
+  padding: 60px 0 0;
   ul {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 24px;
+  }
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 60px;
+  h2 {
+    font-size: 36px;
+    text-align: center;
+  }
+
+  button {
+    background-color: #00953b;
+    border: none;
+    color: #ffffff;
+    padding: 16px 48px;
+    font-size: 16px;
+    transition: all 0.3s;
+    &:hover {
+      background-color: #01712d;
+    }
   }
 }
 

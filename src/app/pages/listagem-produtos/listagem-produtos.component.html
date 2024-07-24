@@ -1,17 +1,12 @@
 <h2>Produtos</h2>
 
-<p>
+<p *ngIf="listagemProdutos.length === 0">
   Não foram encontrados produtos correspondentes ao termo digitado. Por favor,
   realize uma nova busca.
 </p>
 
 <ul>
-  <li><app-card-produto></app-card-produto></li>
-  <li><app-card-produto></app-card-produto></li>
-  <li><app-card-produto></app-card-produto></li>
-  <li><app-card-produto></app-card-produto></li>
-  <li><app-card-produto></app-card-produto></li>
-  <li><app-card-produto></app-card-produto></li>
-  <li><app-card-produto></app-card-produto></li>
-  <li><app-card-produto></app-card-produto></li>
+  <li *ngFor="let produto of listagemProdutos">
+    <app-card-produto [elemento]="produto"></app-card-produto>
+  </li>
 </ul>

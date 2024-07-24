@@ -37,26 +37,25 @@
 </swiper-container>
 
 <section class="mais-vendidos">
-  <h2>Mais Vendidos da Semana</h2>
+  <div class="top">
+    <h2>Mais Vendidos da Semana</h2>
+    <button routerLink="produtos">Todos os produtos</button>
+  </div>
   <ul>
-    <li><app-card-produto></app-card-produto></li>
-    <li><app-card-produto></app-card-produto></li>
-    <li><app-card-produto></app-card-produto></li>
-    <li><app-card-produto></app-card-produto></li>
-    <li><app-card-produto></app-card-produto></li>
+    <li *ngFor="let produto of listagemPopulares">
+      <app-card-produto [elemento]="produto"></app-card-produto>
+    </li>
   </ul>
 </section>
 
 <section class="ofertas">
-  <h2>Ofertas do Dia</h2>
+  <div class="top">
+    <h2>Ofertas do Dia</h2>
+    <button routerLink="produtos">Todos os produtos</button>
+  </div>
   <ul>
-    <li><app-card-produto></app-card-produto></li>
-    <li><app-card-produto></app-card-produto></li>
-    <li><app-card-produto></app-card-produto></li>
-    <li><app-card-produto></app-card-produto></li>
-    <li><app-card-produto></app-card-produto></li>
-    <li><app-card-produto></app-card-produto></li>
-    <li><app-card-produto></app-card-produto></li>
-    <li><app-card-produto></app-card-produto></li>
+    <li *ngFor="let produto of listagemOfertas">
+      <app-card-produto [elemento]="produto"></app-card-produto>
+    </li>
   </ul>
 </section>

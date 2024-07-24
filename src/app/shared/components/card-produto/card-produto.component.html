@@ -1,11 +1,15 @@
-<div>
-  <img
-    src="https://woodmart.xtemos.com/plants/wp-content/uploads/sites/12/2023/05/w-indoor-plants-small-4-0.jpg"
-    alt="Anthurium – King of hearts"
-  />
-  <h3>Anthurium – King of hearts</h3>
+<div class="card-produto" [routerLink]="[elemento?.rota]">
+  <img [src]="elemento?.imagem" [alt]="elemento?.nome" />
+  <h3>{{ elemento?.nome }}</h3>
   <div class="valores">
-    <span class="oferta">R$ 79,00</span>
-    <span>R$ 65,00</span>
+    <span *ngIf="elemento!.valor_promocao > 0" class="oferta">
+      {{ elemento?.valor | currency : "BRL" }}
+    </span>
+    <span *ngIf="elemento!.valor_promocao > 0">
+      {{ elemento?.valor_promocao | currency : "BRL" }}
+    </span>
+    <span *ngIf="elemento!.valor_promocao === 0">
+      {{ elemento?.valor | currency : "BRL" }}
+    </span>
   </div>
 </div>
