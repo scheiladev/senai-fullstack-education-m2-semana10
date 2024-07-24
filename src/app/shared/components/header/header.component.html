@@ -1,8 +1,6 @@
 <header>
-  <h1>
-    <a href="">
-      <img src="../../../../assets/logo-header.png" alt="EcoMarket" />
-    </a>
+  <h1 [routerLink]="'/'">
+    <img src="../../../../assets/logo-header.png" alt="EcoMarket" />
   </h1>
 
   <div>
@@ -12,9 +10,14 @@
 
   <nav>
     <ul>
-      <li><a href="#">Crie sua conta</a></li>
-      <li><a href="#">Entrar</a></li>
-      <li><a href="#">Carrinho</a></li>
+      <li>Crie sua conta</li>
+      <li>Entrar</li>
+      <li class="carrinho">
+        <span [routerLink]="'/carrinho'">Carrinho</span>
+        <div *ngIf="contadorCarrinho">
+          {{ contadorCarrinho }}
+        </div>
+      </li>
     </ul>
   </nav>
 </header>

@@ -6,6 +6,7 @@ h2 {
 .carrinho {
   display: grid;
   grid-template-columns: 2fr 1fr;
+  align-items: flex-start;
   gap: 48px;
   div {
     table {
@@ -23,6 +24,10 @@ h2 {
     }
   }
   .produtos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 48px;
     table {
       border-bottom: 1px solid #ccc;
       th {
@@ -47,6 +52,8 @@ h2 {
           padding: 0 16px;
         }
       }
+    }
+    > button {
     }
   }
   .resumo {
@@ -88,6 +95,9 @@ h2 {
   gap: 24px;
   img {
     width: 240px;
+  }
+  p {
+    text-align: center;
   }
   button {
     background-color: #00953b;

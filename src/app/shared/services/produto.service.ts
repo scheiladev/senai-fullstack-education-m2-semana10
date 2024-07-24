@@ -14,7 +14,7 @@ export class ProdutoService {
     return this.httpClient.get<Array<ProdutoInterface>>(this.url);
   }
 
-  getProduto(id: number) {
+  getProduto(id: string) {
     return this.httpClient.get<ProdutoInterface>(this.url + `/${id}`);
   }
 }

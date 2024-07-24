@@ -1,7 +1,7 @@
 export interface ComentarioInterface {
-  id: number;
+  id: string;
   nome: string;
   avatar: string;
   comentario: string;
-  produto_id: number;
+  produto_id: string;
 }

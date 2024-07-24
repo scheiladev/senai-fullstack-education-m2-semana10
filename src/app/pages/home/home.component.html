@@ -39,7 +39,7 @@
 <section class="mais-vendidos">
   <div class="top">
     <h2>Mais Vendidos da Semana</h2>
-    <button routerLink="produtos">Todos os produtos</button>
+    <button [routerLink]="'/produtos'">Todos os produtos</button>
   </div>
   <ul>
     <li *ngFor="let produto of listagemPopulares">
@@ -51,7 +51,7 @@
 <section class="ofertas">
   <div class="top">
     <h2>Ofertas do Dia</h2>
-    <button routerLink="produtos">Todos os produtos</button>
+    <button [routerLink]="'/produtos'">Todos os produtos</button>
   </div>
   <ul>
     <li *ngFor="let produto of listagemOfertas">

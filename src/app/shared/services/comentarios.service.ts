@@ -10,7 +10,7 @@ export class ComentariosService {
 
   constructor(private httpClient: HttpClient) {}
 
-  getComentariosProduto(produtoId: number) {
+  getComentariosProduto(produtoId: string) {
     return this.httpClient.get<Array<ComentarioInterface>>(
       this.url + `?produto_id=${produtoId}`
     );

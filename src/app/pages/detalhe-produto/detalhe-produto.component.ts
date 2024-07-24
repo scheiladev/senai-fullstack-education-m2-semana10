@@ -1,10 +1,11 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA, OnInit } from '@angular/core';
-import { ProdutoInterface } from '../../shared/interfaces/produto-interface';
-import { ProdutoService } from '../../core/services/produto.service';
 import { CommonModule } from '@angular/common';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ProdutoInterface } from '../../shared/interfaces/produto-interface';
+import { ProdutoService } from '../../shared/services/produto.service';
 import { ComentarioInterface } from '../../shared/interfaces/comentario-interface';
-import { ComentariosService } from '../../core/services/comentarios.service';
+import { ComentariosService } from '../../shared/services/comentarios.service';
+import { CarrinhoService } from '../../shared/services/carrinho.service';
 
 @Component({
   selector: 'app-detalhe-produto',
@@ -15,14 +16,26 @@ import { ComentariosService } from '../../core/services/comentarios.service';
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class DetalheProdutoComponent implements OnInit {
-  produto!: ProdutoInterface;
+  produto: ProdutoInterface = {
+    id: '',
+    nome: '',
+    descricao: '',
+    valor: 0,
+    valor_promocao: 0,
+    imagem: [],
+    estoque: 0,
+    vendidos: 0,
+  };
   comentarios: Array<ComentarioInterface> = [];
-  idProduto!: number;
+  idProduto!: string;
+  estoque!: number;
 
   constructor(
     public produtoService: ProdutoService,
     public comentarioService: ComentariosService,
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    private carrinhoService: CarrinhoService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -31,8 +44,8 @@ export class DetalheProdutoComponent implements OnInit {
     if (this.idProduto) {
       this.produtoService.getProduto(this.idProduto).subscribe((retorno) => {
         if (retorno) {
-          console.log(retorno);
           this.produto = retorno;
+          this.estoque = retorno.estoque;
         }
       });
     }
@@ -44,5 +57,10 @@ export class DetalheProdutoComponent implements OnInit {
           this.comentarios.push(comentario);
         });
       });
+  }
+
+  adicionarProduto() {
+    this.carrinhoService.adicionarProduto(this.produto);
+    this.router.navigate(['/carrinho']);
   }
 }
