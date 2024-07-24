@@ -1,0 +1,27 @@
+<header>
+  <h1 [routerLink]="'/'">
+    <img src="../../../../assets/logo-header.png" alt="EcoMarket" />
+  </h1>
+
+  <div class="pesquisa">
+    <input
+      type="text"
+      [(ngModel)]="textoPesquisa"
+      placeholder="Buscar produto"
+    />
+    <button (click)="pesquisar()">Pesquisar</button>
+  </div>
+
+  <nav>
+    <ul>
+      <li>Crie sua conta</li>
+      <li>Entrar</li>
+      <li class="carrinho">
+        <span [routerLink]="'/carrinho'">Carrinho</span>
+        <div *ngIf="contadorCarrinho">
+          {{ contadorCarrinho }}
+        </div>
+      </li>
+    </ul>
+  </nav>
+</header>

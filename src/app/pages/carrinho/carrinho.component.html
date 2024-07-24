@@ -1,0 +1,78 @@
+<h2>Carrinho</h2>
+
+<section class="carrinho-vazio" *ngIf="contadorCarrinho === 0">
+  <img src="../../../assets/carrinho-de-compras.png" alt="" />
+  <p>
+    Seu carrinho está vazio.<br />Faça uma busca ou conheça nosso catálogo
+    completo.
+  </p>
+  <button [routerLink]="'/produtos'">Ver todos os produtos</button>
+</section>
+
+<section class="carrinho" *ngIf="contadorCarrinho > 0">
+  <div class="produtos">
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th>Produto</th>
+          <th>Quantidade</th>
+          <th>Valor Total</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let produto of itensPedido">
+          <td>
+            <img [src]="produto.imagem" [alt]="produto.nome" />
+          </td>
+          <td>{{ produto.nome }}</td>
+          <td>
+            <button *ngIf="produto.quantidade === 1" disabled class="off">
+              -
+            </button>
+            <button
+              *ngIf="produto.quantidade > 1"
+              (click)="subtrairQuantidade(produto.id)"
+            >
+              -
+            </button>
+            <span>{{ produto.quantidade }}</span>
+            <button (click)="adicionarQuantidade(produto.id)">+</button>
+          </td>
+          <td *ngIf="produto.valor_promocao === 0">
+            {{ produto.valor * produto.quantidade | currency : "BRL" }}
+          </td>
+          <td *ngIf="produto.valor_promocao > 0">
+            {{ produto.valor_promocao * produto.quantidade | currency : "BRL" }}
+          </td>
+          <td>
+            <button (click)="removerProduto(produto.id)">Remover</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <button [routerLink]="'/produtos'">Comprar mais produtos</button>
+  </div>
+
+  <div class="resumo">
+    <h3>Resumo</h3>
+    <table>
+      <tbody>
+        <tr>
+          <th>Valor da Compra</th>
+          <td>{{ totalProdutos | currency : "BRL" }}</td>
+        </tr>
+        <tr>
+          <th>Frete</th>
+          <td>{{ frete | currency : "BRL" }}</td>
+        </tr>
+        <tr>
+          <th>Total a Pagar</th>
+          <td>{{ totalProdutos + frete | currency : "BRL" }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <button>Comprar</button>
+  </div>
+</section>

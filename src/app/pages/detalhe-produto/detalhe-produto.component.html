@@ -1,0 +1,52 @@
+<section class="detalhes">
+  <div class="left">
+    <h2>{{ produto.nome }}</h2>
+    <p>{{ produto.descricao }}</p>
+  </div>
+  <div class="right">
+    <div class="valores">
+      <span *ngIf="produto.valor_promocao > 0" class="oferta">
+        {{ produto.valor | currency : "BRL" }}
+      </span>
+      <span *ngIf="produto.valor_promocao > 0">
+        {{ produto.valor_promocao | currency : "BRL" }}
+      </span>
+      <span *ngIf="produto.valor_promocao === 0">
+        {{ produto.valor | currency : "BRL" }}
+      </span>
+    </div>
+    <button *ngIf="estoque === 0" class="off">Produto esgotado</button>
+    <button (click)="adicionarProduto()" *ngIf="estoque > 0">
+      Adicionar ao Carrinho
+    </button>
+  </div>
+</section>
+
+<swiper-container
+  loop="true"
+  navigation="true"
+  pagination="true"
+  slides-per-view="3"
+  space-between="10"
+  style="height: 400px; color: green"
+>
+  <swiper-slide *ngFor="let imagem of produto.imagem">
+    <img [src]="imagem" />
+  </swiper-slide>
+</swiper-container>
+
+<section class="comentarios">
+  <h3>Comentários:</h3>
+  <p *ngIf="comentarios.length === 0">
+    Este produto ainda não tem comentários.
+  </p>
+  <ul>
+    <li *ngFor="let comentario of comentarios">
+      <img [src]="comentario.avatar" [alt]="comentario.nome" />
+      <p>
+        {{ comentario.comentario }}
+        <span>{{ comentario.nome }}</span>
+      </p>
+    </li>
+  </ul>
+</section>

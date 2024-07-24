@@ -1,0 +1,15 @@
+<div class="card-produto" [routerLink]="[elemento?.rota]">
+  <img [src]="elemento?.imagem" [alt]="elemento?.nome" />
+  <h3>{{ elemento?.nome }}</h3>
+  <div class="valores">
+    <span *ngIf="elemento!.valor_promocao > 0" class="oferta">
+      {{ elemento?.valor | currency : "BRL" }}
+    </span>
+    <span *ngIf="elemento!.valor_promocao > 0">
+      {{ elemento?.valor_promocao | currency : "BRL" }}
+    </span>
+    <span *ngIf="elemento!.valor_promocao === 0">
+      {{ elemento?.valor | currency : "BRL" }}
+    </span>
+  </div>
+</div>
