@@ -1,17 +1,19 @@
 <section class="detalhes">
   <div class="left">
-    <h2>Anthurium – King of hearts</h2>
-    <p>
-      Croton, also called “garden croton,” are native to the tropical forests of
-      southeast Asia and Oceania. In the wild, they grow as large shrubs,
-      reaching up to 10 feet tall (in the home or garden, they stay a lot
-      smaller).
-    </p>
+    <h2>{{ produto.nome }}</h2>
+    <p>{{ produto.descricao }}</p>
   </div>
   <div class="right">
     <div class="valores">
-      <span class="oferta">R$ 79,00</span>
-      <span>R$ 65,00</span>
+      <span *ngIf="produto.valor_promocao > 0" class="oferta">
+        {{ produto.valor | currency : "BRL" }}
+      </span>
+      <span *ngIf="produto.valor_promocao > 0">
+        {{ produto.valor_promocao | currency : "BRL" }}
+      </span>
+      <span *ngIf="produto.valor_promocao === 0">
+        {{ produto.valor | currency : "BRL" }}
+      </span>
     </div>
     <button>Adicionar ao Carrinho</button>
   </div>
@@ -25,56 +27,22 @@
   space-between="10"
   style="height: 400px; color: green"
 >
-  <swiper-slide>
-    <img
-      src="https://woodmart.xtemos.com/plants/wp-content/uploads/sites/12/2023/05/w-indoor-plants-small-4-0.jpg"
-    />
-  </swiper-slide>
-  <swiper-slide>
-    <img
-      src="https://woodmart.xtemos.com/plants/wp-content/uploads/sites/12/2023/05/w-indoor-plants-small-4-1.jpg"
-    />
-  </swiper-slide>
-  <swiper-slide>
-    <img
-      src="https://woodmart.xtemos.com/plants/wp-content/uploads/sites/12/2023/05/w-indoor-plants-small-4-2.jpg"
-    />
-  </swiper-slide>
-  <swiper-slide>
-    <img
-      src="https://woodmart.xtemos.com/plants/wp-content/uploads/sites/12/2023/05/w-indoor-plants-small-4-3.jpg"
-    />
-  </swiper-slide>
-  <swiper-slide>
-    <img
-      src="https://woodmart.xtemos.com/plants/wp-content/uploads/sites/12/2023/05/w-indoor-plants-small-4-4.jpg"
-    />
+  <swiper-slide *ngFor="let imagem of produto.imagem">
+    <img [src]="imagem" />
   </swiper-slide>
 </swiper-container>
 
 <section class="comentarios">
   <h3>Comentários:</h3>
+  <p *ngIf="comentarios.length === 0">
+    Este produto ainda não tem comentários.
+  </p>
   <ul>
-    <li>
-      <img
-        src="https://randomuser.me/api/portraits/women/1.jpg"
-        alt="Sophia Nelson"
-      />
+    <li *ngFor="let comentario of comentarios">
+      <img [src]="comentario.avatar" alt="comentario.nome" />
       <p>
-        "Real content can help identify potential issues and improve the overall
-        design."
-        <span>Sophia Nelson</span>
-      </p>
-    </li>
-    <li>
-      <img
-        src="https://randomuser.me/api/portraits/men/1.jpg"
-        alt="Liam Hall"
-      />
-      <p>
-        "Testing with real data ensures that the final product meets user
-        needs."
-        <span>Liam Hall</span>
+        {{ comentario.comentario }}
+        <span>{{ comentario.nome }}</span>
       </p>
     </li>
   </ul>

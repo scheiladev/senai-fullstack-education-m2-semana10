@@ -6,7 +6,7 @@ import { CarrinhoComponent } from './pages/carrinho/carrinho.component';
 
 export const routes: Routes = [
   {
-    path: 'home',
+    path: '',
     component: HomeComponent,
   },
   {
@@ -17,7 +17,7 @@ export const routes: Routes = [
         component: ListagemProdutosComponent,
       },
       {
-        path: 'produto/:id',
+        path: ':id',
         component: DetalheProdutoComponent,
       },
     ],
@@ -25,10 +25,5 @@ export const routes: Routes = [
   {
     path: 'carrinho',
     component: CarrinhoComponent,
-  },
-  {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full',
   },
 ];
