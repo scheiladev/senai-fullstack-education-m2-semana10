@@ -1,12 +1,15 @@
 <h2>Carrinho</h2>
 
-<section class="carrinho-vazio">
+<section class="carrinho-vazio" *ngIf="contadorCarrinho === 0">
   <img src="../../../assets/carrinho-de-compras.png" alt="" />
-  <p>Seu carrinho está vazio.</p>
-  <button>Buscar Produtos</button>
+  <p>
+    Seu carrinho está vazio.<br />Faça uma busca ou conheça nosso catálogo
+    completo.
+  </p>
+  <button [routerLink]="'/produtos'">Ver todos os produtos</button>
 </section>
 
-<section class="carrinho">
+<section class="carrinho" *ngIf="contadorCarrinho > 0">
   <div class="produtos">
     <table>
       <thead>
@@ -19,43 +22,46 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
+        <tr *ngFor="let produto of itensPedido">
           <td>
-            <img
-              src="https://woodmart.xtemos.com/plants/wp-content/uploads/sites/12/2023/05/w-indoor-plants-small-4-0.jpg"
-              alt="Produto"
-            />
+            <img [src]="produto.imagem" [alt]="produto.nome" />
           </td>
-          <td>Anthurium – King of hearts</td>
+          <td>{{ produto.nome }}</td>
           <td>
-            <button>-</button>
-            <span>1</span>
-            <button>+</button>
+            <button (click)="subtrairQuantidade(produto.id)">-</button>
+            <span>{{ produto.quantidade }}</span>
+            <button (click)="adicionarQuantidade(produto.id)">+</button>
           </td>
-          <td>R$ 79,00</td>
+          <td *ngIf="produto.valor_promocao === 0">
+            {{ produto.valor * produto.quantidade | currency : "BRL" }}
+          </td>
+          <td *ngIf="produto.valor_promocao > 0">
+            {{ produto.valor_promocao * produto.quantidade | currency : "BRL" }}
+          </td>
           <td>
-            <button>Remover</button>
+            <button (click)="removerProduto(produto.id)">Remover</button>
           </td>
         </tr>
       </tbody>
     </table>
+    <button [routerLink]="'/produtos'">Comprar mais produtos</button>
   </div>
 
   <div class="resumo">
-    <h3>Resumo da Compra</h3>
+    <h3>Resumo</h3>
     <table>
       <tbody>
         <tr>
           <th>Valor da Compra</th>
-          <td>R$ 79,00</td>
+          <td>{{ totalProdutos | currency : "BRL" }}</td>
         </tr>
         <tr>
           <th>Frete</th>
-          <td>R$ 5,00</td>
+          <td>{{ frete | currency : "BRL" }}</td>
         </tr>
         <tr>
-          <th>Total</th>
-          <td>R$ 84,00</td>
+          <th>Total a Pagar</th>
+          <td>{{ totalProdutos + frete | currency : "BRL" }}</td>
         </tr>
       </tbody>
     </table>

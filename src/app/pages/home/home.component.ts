@@ -1,8 +1,8 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA, OnInit } from '@angular/core';
-import { CardProdutoComponent } from '../../shared/components/card-produto/card-produto.component';
-import { ProdutoService } from '../../core/services/produto.service';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { CardProdutoComponent } from '../../shared/components/card-produto/card-produto.component';
+import { ProdutoService } from '../../shared/services/produto.service';
 import { CardInterface } from '../../shared/interfaces/card-interface';
 import { ProdutoInterface } from '../../shared/interfaces/produto-interface';
 
@@ -56,6 +56,5 @@ export class HomeComponent implements OnInit {
       imagem: produto.imagem[0],
       rota: `produtos/${produto.id}`,
     }));
-    console.log(this.listagemPopulares);
   }
 }

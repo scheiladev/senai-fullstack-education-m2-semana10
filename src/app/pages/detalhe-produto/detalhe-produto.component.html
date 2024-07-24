@@ -15,7 +15,10 @@
         {{ produto.valor | currency : "BRL" }}
       </span>
     </div>
-    <button>Adicionar ao Carrinho</button>
+    <button *ngIf="estoque === 0" class="esgotado">Produto esgotado</button>
+    <button (click)="adicionarProduto()" *ngIf="estoque > 0">
+      Adicionar ao Carrinho
+    </button>
   </div>
 </section>
 
@@ -39,7 +42,7 @@
   </p>
   <ul>
     <li *ngFor="let comentario of comentarios">
-      <img [src]="comentario.avatar" alt="comentario.nome" />
+      <img [src]="comentario.avatar" [alt]="comentario.nome" />
       <p>
         {{ comentario.comentario }}
         <span>{{ comentario.nome }}</span>

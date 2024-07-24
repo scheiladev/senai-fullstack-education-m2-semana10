@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CardProdutoComponent } from '../../shared/components/card-produto/card-produto.component';
-import { ProdutoService } from '../../core/services/produto.service';
+import { ProdutoService } from '../../shared/services/produto.service';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { CardInterface } from '../../shared/interfaces/card-interface';

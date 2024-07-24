@@ -38,9 +38,12 @@
       color: #ffffff;
       padding: 12px 36px;
       transition: all 0.3s;
-
       &:hover {
         background-color: #01712d;
+      }
+      &.esgotado {
+        cursor: not-allowed;
+        background-color: rgba(53, 53, 53, 0.65);
       }
     }
   }
