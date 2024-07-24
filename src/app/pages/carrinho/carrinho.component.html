@@ -28,7 +28,15 @@
           </td>
           <td>{{ produto.nome }}</td>
           <td>
-            <button (click)="subtrairQuantidade(produto.id)">-</button>
+            <button *ngIf="produto.quantidade === 1" disabled class="off">
+              -
+            </button>
+            <button
+              *ngIf="produto.quantidade > 1"
+              (click)="subtrairQuantidade(produto.id)"
+            >
+              -
+            </button>
             <span>{{ produto.quantidade }}</span>
             <button (click)="adicionarQuantidade(produto.id)">+</button>
           </td>

@@ -22,7 +22,12 @@ h2 {
     &:hover {
       background-color: #01712d;
     }
+    &.off {
+      cursor: not-allowed;
+      background-color: rgba(53, 53, 53, 0.65);
+    }
   }
+
   .produtos {
     display: flex;
     flex-direction: column;
@@ -49,6 +54,7 @@ h2 {
         }
         span {
           display: inline-block;
+          width: 50px;
           padding: 0 16px;
         }
       }

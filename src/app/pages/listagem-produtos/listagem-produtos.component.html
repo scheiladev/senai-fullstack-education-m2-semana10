@@ -1,12 +1,19 @@
 <h2>Produtos</h2>
 
-<p *ngIf="listagemProdutos.length === 0">
+<p *ngIf="listagemPesquisa.length === 1">
+  {{ listagemPesquisa.length }} produto
+</p>
+<p *ngIf="listagemPesquisa.length > 1">
+  {{ listagemPesquisa.length }} produtos
+</p>
+
+<p *ngIf="listagemPesquisa.length === 0">
   Não foram encontrados produtos correspondentes ao termo digitado. Por favor,
   realize uma nova busca.
 </p>
 
 <ul>
-  <li *ngFor="let produto of listagemProdutos">
+  <li *ngFor="let produto of listagemPesquisa">
     <app-card-produto [elemento]="produto"></app-card-produto>
   </li>
 </ul>
