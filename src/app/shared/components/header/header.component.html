@@ -3,9 +3,13 @@
     <img src="../../../../assets/logo-header.png" alt="EcoMarket" />
   </h1>
 
-  <div>
-    <input type="text" placeholder="Buscar produto" />
-    <button>Pesquisar</button>
+  <div class="pesquisa">
+    <input
+      type="text"
+      [(ngModel)]="textoPesquisa"
+      placeholder="Buscar produto"
+    />
+    <button (click)="pesquisar()">Pesquisar</button>
   </div>
 
   <nav>

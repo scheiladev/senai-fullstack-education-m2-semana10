@@ -15,7 +15,7 @@
         {{ produto.valor | currency : "BRL" }}
       </span>
     </div>
-    <button *ngIf="estoque === 0" class="esgotado">Produto esgotado</button>
+    <button *ngIf="estoque === 0" class="off">Produto esgotado</button>
     <button (click)="adicionarProduto()" *ngIf="estoque > 0">
       Adicionar ao Carrinho
     </button>
